@@ -1,0 +1,48 @@
+Update version:
+2023.21.8
+- Create Top Navigation
+2023.24.8
+- Create Home page
+2023.26.8
+- Fixed "Home" page
+    + Add light 'n dark background
+    + Add some animation
+    + Fixed Footer
+- Fixed "About & Contact" page
+    + Add background image
+    + Add legend, fieldset
+- Add "Update" page
+    + Add some nearly update of SW3
+    + Add new type of bullet
+    + Add shadow for content
+    + Add half left dark background
+2023.27.8
+- Add basic 'back to top' button
+- Fixed 'About & Contact' page
+    + Fix position of the form
+    + Fix size of the form
+2023.28.8
+- Add Download page
+    + Add some basic information about SW3
+2023.29.8
+- Fixed Download page
+    + Add animation
+    + Add choosing plaform download
+2023.2.9
+- Add Others Game page
+    + Add some introduce of others game of series Stick War: Stick War Legacy, Stick War 2, Stick Empire
+    + Add animation
+2023.9.9
+- Add Login and Register pages
+    + Add required star
+    + Add avatar for the left of Login pages
+2023.10.9
+- Fix underline color of hover button at top navigation
+    + Fix to green from red
+- Fix Others game page
+    + Fix distance between two game card
+    + Create shadows when touching card
+    + Fix height for the image of each card: same height - 300px
+2023.14.9
+- Add Pop Up for Download page
+- Add Dropdown for Home button on Top Navigation

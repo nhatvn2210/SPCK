@@ -1,0 +1,282 @@
+/* Định nghĩa hiệu ứng */
+@keyframes float-up {
+    from {position: relative; top: 100px; opacity: 0; z-index: -25;}
+    to {position: relative; top: 0; opacity: 1; z-index: -25;}
+}
+@keyframes appear-opacity{
+    from{opacity: 0; position: fixed;}
+    to{opacity: 1; position: fixed;}
+}
+@keyframes split-vertical-out{
+    from {position: relative; right: 100vw; opacity: 0; z-index: -25;}
+    to{position: relative; right: 0; opacity: 1; z-index: -25;}
+}
+@keyframes hover-fly{
+    from{ position: relative; bottom: 0; }
+    to{ position: relative; bottom: 3px; }
+}
+@keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+/* Bố cục toàn trang */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+/* "Khai báo" hiệu ứng */
+.split-vertical-out{
+    animation-name: split-vertical-out;
+}
+.float-up{
+    animation-name: float-up;
+}
+.exit{
+    animation-name: exit;
+}
+.appear-opacity{
+    animation-name: appear-opacity;
+}
+.hover-fly:hover{
+    opacity: 0.8;
+    animation-name: hover-fly;
+    animation-duration: 0.5s;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+.split-vertical-out, .float-up, .exit, .appear-opacity{
+    animation-duration: 3s;
+}
+/* Thành phần đặc biệt */
+.flex-container{
+    display: flex;
+}
+.section{
+    height: 100px;
+}
+.short-section{
+    height: 50px;
+}
+.part-title{
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+.footer-title{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.top-section{
+    display: none;
+}
+.relative{
+    position: relative;
+}
+.dark-element{
+    background-color: #323642;
+    position: absolute;
+    width: 100%;
+    animation-name: float-up;
+    z-index: -1;
+}
+.white-title{
+    color: white;
+}
+/* Navigation */
+.nav{
+    font-family: 'Roboto Slab', serif;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-size: 1.25em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    animation-duration: appear;
+    animation-duration: 2s;
+}
+.nav .menu{
+    flex: 50%;
+}
+.nav .logo, .nav .login-register{
+    flex: 25%;
+    justify-content: center;
+}
+.nav .menu ul{
+    list-style: none;
+    justify-content: space-evenly;
+}
+.nav .menu ul li a, .nav .login-register a, .nav .login-register p{
+    text-decoration: none;
+    color: #000000;
+}
+.nav .login-register p{
+    margin: 0 10px;
+}
+.nav .menu ul li a{
+    text-transform: uppercase;
+}
+.nav .menu ul li a:hover, .nav .login-register a:hover{
+    text-decoration: underline green;
+}
+.nav .logo img{
+    margin: 0 10px;
+}
+/* Thân trang*/
+.text-wrapper{
+    margin-top: 100px;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+/* Giới thiệu */
+.introduce{
+    justify-content: space-evenly;
+}
+.introduce .logo img{
+    max-width: 250px;
+    border-radius: 20%;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+.introduce .content{
+    text-align: right;
+}
+.introduce .content h1, .introduce .content h4, .introduce .content .least-age{
+    margin-bottom: 20px;
+}
+.introduce .content h1{
+    font-size: 3.5em;
+}
+.introduce .content h4{
+    font-size: 1.25em;
+    color: green;
+}
+.introduce .content .under-content .number-of-download{
+    text-align: center;
+    border-right: gray solid 2px;
+    padding-right: 15px;
+}
+.introduce .content .under-content .number-of-download .title{
+    font-weight: bold;
+}
+.introduce .content .under-content .least-age{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.introduce .content .under-content .least-age img{
+    width: 17px;
+}
+.introduce .content .under-content .least-age p{
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+}
+.introduce .requirement-button{
+    font-size: 1.25em;
+    background-color: green;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+}
+/* Chọn HĐH để tải xuống */
+.choosing-download .choosing-download-content{
+    flex-direction: column;
+}
+.choosing-download .choosing-platform{
+    font-size: 1.75em;
+    text-align: center;
+}
+.choosing-download .choosing-download-content .element{
+    align-items: center;
+    margin-top: 20px;
+}
+.choosing-download .choosing-download-content .element .install{
+    background-color: green;
+    border: none;
+    flex: 20%;
+    color: #FFFFFF;
+    border-radius: 25px;
+    font-size: 1.5em;
+    width: 150px;
+    height: 50px;
+}
+.choosing-download .choosing-download-content .element .install:hover{
+    cursor: pointer;
+}
+.choosing-download .choosing-download-content .element p{
+    flex: 50%;
+}
+.choosing-download .choosing-download-content .element h1{
+    font-size: 1.5em;
+    flex: 30%;
+}
+/* Pop up */
+.dark-background{
+    width: 100vw;
+    height: 100vh;
+    z-index: 98;
+    background-color: black;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+.pop-up{
+    visibility: hidden;
+    position: fixed;
+    z-index: 99;
+    width: 60vw;
+    height: 60vh;
+    margin: 20vh 20vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    
+}
+.pop-up .pop-up-cross{
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    
+}
+.pop-up h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.25em;
+}
+.pop-up ul{
+    list-style: url(/SPCK/Product/Photos/update_bullet.png);
+    margin-left: 50px;
+    font-size: 1.2em;
+}
+.pop-up li{
+    margin: 20px 0;
+}
+.dark-background-show{
+    visibility: visible;
+}
+.pop-up-show{
+    visibility: visible;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}

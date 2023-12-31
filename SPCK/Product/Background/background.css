@@ -1,0 +1,19 @@
+/* Phần tạo nền */
+.background-element{
+    background-image: url(https://play-lh.googleusercontent.com/W0puyw38i7RjtyWMqskGaCLp2PAvLJv22-iuiecOmf3-63Uj8LtVp90i47i6AYnJLA=w1052-h592);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+    position: fixed;
+    top: 0;
+}
+.dark-cover{
+    background-color: #323642;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+    position: fixed;
+    top: 0;
+}

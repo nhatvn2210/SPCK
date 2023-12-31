@@ -1,0 +1,155 @@
+/* Định nghĩa hiệu ứng */
+@keyframes float-up {
+    from {position: relative; top: 100px; opacity: 0; z-index: -25;}
+    to {position: relative; top: 0; opacity: 1; z-index: -25;}
+}
+@keyframes appear-opacity{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes split-vertical-out{
+    from {position: relative; right: 100vw; opacity: 0; z-index: -25;}
+    to{position: relative; right: 0; opacity: 1; z-index: -25;}
+}
+@keyframes exit{
+    from { display: block; }
+    to { display: none; }
+}
+@keyframes hover-fly{
+    from{ position: relative; bottom: 0; }
+    to{ position: relative; bottom: 3px; }
+}
+/* Bố cục toàn trang */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+/* "Khai báo" hiệu ứng */
+.split-vertical-out{
+    animation-name: split-vertical-out;
+}
+.float-up{
+    animation-name: float-up;
+}
+.exit{
+    animation-name: exit;
+}
+.appear-opacity{
+    animation-name: appear-opacity;
+}
+.hover-fly:hover{
+    opacity: 0.8;
+    animation-name: hover-fly;
+    animation-duration: 0.5s;
+    position: relative;
+    bottom: 3px;
+}
+.split-vertical-out, .float-up, .exit, .appear-opacity{
+    animation-duration: 3s;
+}
+/* Thành phần đặc biệt */
+.flex-container{
+    display: flex;
+}
+.section{
+    height: 100px;
+}
+.part-title{
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+.footer-title{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.top-section{
+    display: none;
+}
+.relative{
+    position: relative;
+}
+.dark-element{
+    background-color: #323642;
+    position: absolute;
+    width: 100%;
+    animation-name: float-up;
+    z-index: -1;
+}
+.white-title{
+    color: white;
+}
+/* Navigation */
+.nav{
+    font-family: 'Roboto Slab', serif;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-size: 1.25em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    animation-duration: appear;
+    animation-duration: 2s;
+}
+.nav .menu{
+    flex: 50%;
+}
+.nav .logo, .nav .login-register{
+    flex: 25%;
+    justify-content: center;
+}
+.nav .menu ul{
+    list-style: none;
+    justify-content: space-evenly;
+}
+.nav .menu ul li a, .nav .login-register a, .nav .login-register p{
+    text-decoration: none;
+    color: #000000;
+}
+.nav .login-register p{
+    margin: 0 10px;
+}
+.nav .menu ul li a{
+    text-transform: uppercase;
+}
+.nav .menu ul li a:hover, .nav .login-register a:hover{
+    text-decoration: underline green;
+}
+.nav .logo img{
+    margin: 0 10px;
+}
+/* Dropdown for navigation */
+.nav .menu .dropdown-container{
+    position: relative;
+}
+.nav .menu .dropdown-container .dropdown-content{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: none;
+}
+.nav .menu .dropdown-container .dropdown-arrow{
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    transition: rotate .3s;
+}
+.nav .menu .dropdown-content ul li{
+    margin: 10px 0;
+}
+.nav .menu .dropdown-container:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    padding: 0 15px;
+    width: max-content;
+    animation-name: appear-opacity;
+    animation-duration: .5s;
+}
+.nav .menu .dropdown-container:hover .dropdown-arrow{
+    rotate: 90deg;
+}

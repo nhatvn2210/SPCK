@@ -1,0 +1,192 @@
+/* Định nghĩa hiệu ứng */
+@keyframes float-up {
+    from {position: relative; top: 100px; opacity: 0; z-index: -25;}
+    to {position: relative; top: 0; opacity: 1; z-index: -25;}
+}
+@keyframes appear-opacity{
+    from{opacity: 0; position: fixed;}
+    to{opacity: 1; position: fixed;}
+}
+@keyframes split-vertical-out{
+    from {position: relative; right: 100vw; opacity: 0; z-index: -25;}
+    to{position: relative; right: 0; opacity: 1; z-index: -25;}
+}
+@keyframes exit{
+    from { display: block; }
+    to { display: none; }
+}
+@keyframes hover-fly{
+    from{ position: relative; bottom: 0; }
+    to{ position: relative; bottom: 3px; }
+}
+/* Bố cục toàn trang */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+/* "Khai báo" hiệu ứng */
+.split-vertical-out{
+    animation-name: split-vertical-out;
+}
+.float-up{
+    animation-name: float-up;
+}
+.exit{
+    animation-name: exit;
+}
+.appear-opacity{
+    animation-name: appear-opacity;
+}
+.hover-fly:hover{
+    opacity: 0.8;
+    animation-name: hover-fly;
+    animation-duration: 0.5s;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+.split-vertical-out, .float-up, .exit, .appear-opacity{
+    animation-duration: 3s;
+}
+/* Thành phần đặc biệt */
+.flex-container{
+    display: flex;
+}
+.section{
+    height: 100px;
+}
+.part-title{
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+.footer-title{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.top-section{
+    display: none;
+}
+.relative{
+    position: relative;
+}
+.dark-element{
+    background-color: #323642;
+    position: absolute;
+    width: 100%;
+    animation-name: float-up;
+    z-index: -1;
+}
+.white-title{
+    color: white;
+}
+/* Navigation */
+.nav{
+    font-family: 'Roboto Slab', serif;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    font-size: 1.25em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    animation-duration: appear;
+    animation-duration: 2s;
+}
+.nav .menu{
+    flex: 50%;
+}
+.nav .logo, .nav .login-register{
+    flex: 25%;
+    justify-content: center;
+}
+.nav .menu ul{
+    list-style: none;
+    justify-content: space-evenly;
+}
+.nav .menu ul li a, .nav .login-register a, .nav .login-register p{
+    text-decoration: none;
+    color: #000000;
+}
+.nav .login-register p{
+    margin: 0 10px;
+}
+.nav .menu ul li a{
+    text-transform: uppercase;
+}
+.nav .menu ul li a:hover, .nav .login-register a:hover{
+    text-decoration: underline green;
+}
+.nav .logo img{
+    margin: 0 10px;
+}
+/* Thân trang */
+.container{
+    width: 54vw;
+    height: 60vh;
+    margin: calc(15vh - 50px) 25vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.container .left-image{
+    height: 100%;
+    flex: 40%;
+}
+.container .left-image img{
+    height: 100%;
+    width: 100%;
+}
+.container .right-content{
+    height: 100%;
+    flex: 40%;
+    margin-left: 20px;
+}
+.container .right-content .form h1{
+    margin: 20px 0;
+    font-weight: normal;
+    font-size: 1.75em;
+}
+.container .right-content .form .text-input{
+    font-size: 1.25em;
+    border: none;
+    border-bottom: 1px gray solid;
+    width: 350px;
+}
+.container .right-content .form .text-input:focus{
+    outline: none;
+}
+.container .right-content .form .forgot-password{
+    text-decoration: none;
+    color: green;
+    margin: 10px 10px 10px 0;
+    text-align: right;
+    display: block;
+}
+.container .right-content .form .submit{
+    border: none;
+    background-color: green;
+    color: white;
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 25px;
+    margin: 0 10%;
+}
+.container .right-content .form .login-by{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+}
+.container .right-content .form .icon-list{
+    font-size: 25px;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stick War 3</title>
+    <link rel="stylesheet" href="/SPCK/Product/Navigation/nav.css">
+    <link rel="stylesheet" href="/SPCK/Product/Background/background.css">
+    <link rel="stylesheet" href="/SPCK/Product/CSS/update.css">
+    <script src="/SPCK/Product/Navigation/nav.js"></script>
+    <link rel="shortcut icon" href="/SPCK/Product/Photos/download-avatar.webp" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b25957ae4f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Paytone+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Thanh navigation -->
+     <nav class="nav flex-container">
+        <div class="logo flex-container">
+            <img src="https://stickpage.com/img/sp_logo_small.png" alt="">
+            <h3 style="font-family: Paytone One, sans-serif; font-weight: bold;">STICKPAGE</h3>
+        </div>
+        <div class="menu">
+            <ul class="flex-container menu-content">
+                <li class="dropdown-container drop1">
+                    <a href="/SPCK/Product/HTML/home.html" class="hover-fly">home </a>
+                    <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <ul>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/home.html#introduce">Introduce</a></li>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/home.html#unit-spell">Unit & Spell</a></li>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/home.html#feature">Feature</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/SPCK/Product/HTML/about.html" class="hover-fly">about & contact</a></li>
+                <li class="dropdown-container drop2">
+                    <a href="/SPCK/Product/HTML/update.html" class="hover-fly">update</a>
+                    <i class="fa-solid fa-chevron-right dropdown-arrow"></i>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <ul>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/update.html#2021-1-343">2021.1.343</a></li>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/update.html#2021-1-349">2021.1.349</a></li>
+                            <li class="hover-fly"><a href="/SPCK/Product/HTML/update.html#2021-1-354">2021.1.354</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/SPCK/Product/HTML/download.html" class="hover-fly">Download</a></li>
+                <li><a href="/SPCK/Product/HTML/others.html" class="hover-fly">Others game</a></li>
+            </ul>
+        </div>
+        <div class="login-register flex-container">
+            <a href="/SPCK/Product/HTML/login.html" class="hover-fly">Login</a>
+            <p>/</p>
+            <a href="/SPCK/Product/HTML/register.html" class="hover-fly">Register</a>
+        </div>
+    </nav>
+    <!-- Thân trang -->
+    <div class="text-wrapper split-vertical-out">
+        <div class="container">
+            <div class="content-box">
+                <h1 id="2021-1-343">2021.1.343</h1>
+                <div class="content-box-element">
+                    <div class="detail">
+                        <h2>16/4/2021</h2>
+                        <ul>
+                            <li>Aligned fog better</li>
+                            <li>Ensure fixate resets on switching targets</li>
+                            <li>Parry for shadowrath</li>
+                            <li>Parry spell trigger.</li>
+                            <li>Fixate. Shadowrath gets increased damage per hit on a target. Builds to 3 stacks</li>
+                        </ul>
+                    </div>
+                    <div class="detail">
+                        <h2>17/4/2021</h2>
+                        <ul>
+                            <li>Tweaked post processing colours a bit</li>
+                            <li>Post processing test</li>
+                            <li>Material update</li>
+                            <li>Playing with background colours and fog shaders</li>
+                        </ul>
+                    </div>
+                    <div class="detail">
+                        <h2>18/4/2021</h2>
+                        <ul>
+                            <li>Disabled background fog</li>
+                            <li>Post processing effect toned down a bit</li>
+                            <li>Reduced visibility of seam running through foreground</li>
+                            <li>Growth size also nerf to 50% from 60%</li>
+                            <li>Fixate bug after stun fix. Monstrosity nerf to 50%</li>
+                            <li>Bunch of the background stuff is now opaque</li>
+                            <li>Testing random grass tuffs</li>
+                            <li>Added magikill staff attachment</li>
+                            <li>Mine hit spring now in physics fixed delta time</li>
+                            <li>Quicker fade to darker colours in the background layers</li>
+                            <li>Added another background layer</li>
+                            <li>Background fog shader fix so it is associated with world height, not camera screen position</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <h1 id="2021-1-349">2021.1.349</h1>
+                <div class="content-box-element">
+                    <div class="detail">
+                        <h2>19/4/2021</h2>
+                        <ul>
+                            <li>A bunch of the sky is now one big static opaque image. Better for performance but there is no longer an animation in the wispy smoke.</li>
+                            <li>Fix to health bar</li>
+                            <li>Low FPS target setting added. Try this if you are getting low frame rates. Dynamic camera promoted to always on and setting was removed.</li>
+                            <li>Ui optimization. Larger wispy clouds Created a game UI texture atlas Working 2v2 casual matchmaking queue.</li>
+                            <li>All games will be 2v2 for a while just to test out this feature. Set coop params in the match</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <h1 id="2021-1-354">2021.1.354</h1>
+                <div class="content-box-element">
+                    <div class="detail">
+                        <h2>19/4/2021</h2>
+                        <ul>
+                            <li>Hide connected hud elements when not connected. Friends list, chat, username</li>
+                            <li>Discord to post full changeLogs, not reduced for android change logs</li>
+                            <li>Optimizing more background stuff</li>
+                            <li>A bunch of the sky is now one big static opaque image. Better for performance but there is no longer an animation in the wispy smoke.</li>
+                            <li>Fix to health bar</li>
+                            <li>Low FPS target setting added. Try this if you are getting low frame rates. Dynamic camera promoted to always on and setting was removed.</li>
+                        </ul>
+                    </div>
+                    <div class="detail">
+                        <h2>20/4/2021</h2>
+                        <ul>
+                            <li>Game start timer fixes.</li>
+                            <li>More melee attack fixes.</li>
+                            <li>Melee attack system cooldown fix to be frame rate independent. Ai targeting system optimizations.</li>
+                            <li>Fixes to prices on army screen slots.</li>
+                            <li>No more sound on poison or burn.</li>
+                            <li>Burn and poison moved to seconds</li>
+                            <li>Abilities and a bunch of other systems to use seconds instead of frames</li>
+                            <li>Global spells converted from frames to seconds</li>
+                            <li>Moving a bunch of systems from frames to seconds passed to be adaptive to core game loop FPS change</li>
+                            <li>All references to 60fps now pointing to deterministicConfig and altered to 30fps</li>
+                            <li>Both players on a team need to resign or timeout for loss to occur</li>
+                            <li>Timeout and resign need both players in coop mode</li>
+                            <li>Editor tool to show unit comparison for balance</li>
+                            <li>20 gold in every miner hit. Nerf from 25 gold previously</li>
+                            <li>Burn nerfed. Now 2 seconds between damage being applied. Was 1 second before</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="read-more hover-fly">
+            <a href="https://stick-war.fandom.com/wiki/Stick_War_III/Game_Updates"><button class="read-more-button">read more</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- Chân trang -->
+    <footer class="footer split-vertical-out">
+        <div class="container flex-container">
+            <div class="about left flex-container">
+                <a href="about.html" class="footer-title">About</a>
+                <p>Email: stickpagestudios@gmail.com</p>
+                <p>Phone number: +84 123456789</p>
+                <p>Location: 7 Green Street, London, England</p>
+                <div class="icon-list">
+                    <i class="fa-brands fa-facebook" style="color: #005eff;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #00ccff;"></i>
+                    <i class="fa-brands fa-google" style="color: #ff3d3d;"></i>
+                    <i class="fa-brands fa-linkedin" style="color: #2866d2;"></i>
+                    <i class="fa-brands fa-youtube" style="color: #ff0505;"></i>
+                    <i class="fa-brands fa-square-instagram" style="color: #6d4abf;"></i>
+                </div>
+            </div>
+            <div class="center">
+                <a href="others.html" class="footer-title center-title">others game</a>
+                <div class="center-content flex-container">
+                    <div class="left-part">
+                        <p>stick war legacy</p>
+                        <p>stick war 2</p>
+                        <p>stick empire</p>
+                    </div>
+                    <div class="right-part">
+                        <a href="download.html">Download</a>
+                        <a href="update.html">Update</a>
+                        <a href="others.html">Others</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <form action="">
+                    <p>Bạn có thể cho chúng tôi một lời nhận xét được chứ?</p>
+                    <div class="input-submit">
+                        <input type="text" placeholder="Nhập tin nhắn của bạn vào đây" class="text">
+                        <input type="submit" value="Send" class="submit hover-fly">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- Phần tạo nền -->
+    <div class="background-element"></div>
+    <div class="dark-cover"></div>
+    <!-- https://play-lh.googleusercontent.com/W0puyw38i7RjtyWMqskGaCLp2PAvLJv22-iuiecOmf3-63Uj8LtVp90i47i6AYnJLA=w1052-h592 -->
+</body>
+</html>
